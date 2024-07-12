@@ -20,9 +20,9 @@ document.addEventListener('DOMContentLoaded', () =>{
      {src: 'images/18.jpg , hdSrc:'images/hd/18.jpg',caption: 'First Image'},
      {src: 'images/19.jpg , hdSrc:'images/hd/19.jpg',caption: 'First Image'},
      {src: 'images/20.jpg , hdSrc:'images/hd/20.jpg',caption: 'First Image'},
-    };
-      
-      const gallery = document.getElementById('gallery');
+    ];
+
+    const gallery = document.getElementById('gallery');
 
     images.forEach((image, index) => {
         const imgElement = document.createElement('img');
@@ -59,5 +59,3 @@ document.addEventListener('DOMContentLoaded', () =>{
         }
     });
 });
-     
-         
