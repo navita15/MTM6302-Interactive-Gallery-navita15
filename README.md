@@ -1,1 +1,1 @@
-# MTM6302-Interactive-Gallery-navita15ery
+# MTM6302-Interactive-Gallery-navita15
