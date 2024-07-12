@@ -21,27 +21,43 @@ document.addEventListener('DOMContentLoaded', () =>{
      {src: 'images/19.jpg , hdSrc:'images/hd/19.jpg',caption: 'First Image'},
      {src: 'images/20.jpg , hdSrc:'images/hd/20.jpg',caption: 'First Image'},
     };
+      
       const gallery = document.getElementById('gallery');
-      images.ForEach({image,index}=> {
-                     const imgElement = document.createElement('img');
-        imgElement.src =image.src;
-        imgElement.dataset.hdsrc = image.hdsrc
+
+    images.forEach((image, index) => {
+        const imgElement = document.createElement('img');
+        imgElement.src = image.src;
+        imgElement.dataset.hdSrc = image.hdSrc;
         imgElement.dataset.caption = image.caption;
         imgElement.dataset.index = index;
-        gallery,appendchild(imgElement);
-      });
-      gallery.addEventListener('click', (e) =>{
-        if(e.target.tagName === 'IMG'){
-          const hdSrc= e.target.dataset.hdSrc;
-          const caption=e.target.dataset.caption;
-          const hdImageContainer=document.createElement('div');
-          hdImageContainer.id ='hd-image-container';
-          hdImageContainer.style.display ='flex';
+        gallery.appendChild(imgElement);
+    });
 
-          const hdImage = document.createElement('img');
-          hdImage.src = hdSrc;
-          hdimagecontainer.appendChild(captionElement);
-          document.body.appendchild(hdImageContainer);
-          hdImage.src = hdSrc;
-          hdImageContainer.add
+    gallery.addEventListener('click', (e) => {
+        if (e.target.tagName === 'IMG') {
+            const hdSrc = e.target.dataset.hdSrc;
+            const caption = e.target.dataset.caption;
+            const hdImageContainer = document.createElement('div');
+            hdImageContainer.id = 'hd-image-container';
+            hdImageContainer.style.display = 'flex';
+
+            const hdImage = document.createElement('img');
+            hdImage.src = hdSrc;
+            hdImageContainer.appendChild(hdImage);
+
+            const captionElement = document.createElement('div');
+            captionElement.id = 'caption';
+            captionElement.textContent = caption;
+            hdImageContainer.appendChild(captionElement);
+
+            document.body.appendChild(hdImageContainer);
+
+            hdImageContainer.addEventListener('click', () => {
+                hdImageContainer.style.display = 'none';
+                document.body.removeChild(hdImageContainer);
+            });
+        }
+    });
+});
      
+         
