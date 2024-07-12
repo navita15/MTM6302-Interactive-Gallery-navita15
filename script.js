@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const images = [
-        {src: 'images/1(2).jpg', hdSrc: 'images/hd/1(2).jpg', caption: 'First Image'},
+        {src: 'images/1 (2).jpg', hdSrc: 'images/hd/1 (2).jpg', caption: 'First Image'},
         {src: 'images/2.jpg', hdSrc: 'images/hd/2.jpg', caption: 'Second Image'},
         {src: 'images/3.jpg', hdSrc: 'images/hd/3.jpg', caption: 'Third Image'},
         {src: 'images/4.jpg', hdSrc: 'images/hd/4.jpg', caption: 'Fourth Image'},
