@@ -9,7 +9,7 @@ body{
 }
 
 .gallery{
-  dispaly: grid;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
   gap: 10 px;
   width:90%;
@@ -17,7 +17,7 @@ body{
   margin:20px auto;
 }
 .gallery img{
-  width =100%;
+  width:100%;
   cursor:pointer;
   transition: transform 0.2s;
 }
