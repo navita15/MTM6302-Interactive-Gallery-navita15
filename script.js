@@ -20,5 +20,28 @@ document.addEventListener('DOMContentLoaded', () =>{
      {src: 'images/18.jpg , hdSrc:'images/hd/18.jpg',caption: 'First Image'},
      {src: 'images/19.jpg , hdSrc:'images/hd/19.jpg',caption: 'First Image'},
      {src: 'images/20.jpg , hdSrc:'images/hd/20.jpg',caption: 'First Image'},
-    }
-     })
+    };
+      const gallery = document.getElementById('gallery');
+      images.ForEach({image,index}=> {
+                     const imgElement = document.createElement('img');
+        imgElement.src =image.src;
+        imgElement.dataset.hdsrc = image.hdsrc
+        imgElement.dataset.caption = image.caption;
+        imgElement.dataset.index = index;
+        gallery,appendchild(imgElement);
+      });
+      gallery.addEventListener('click', (e) =>{
+        if(e.target.tagName === 'IMG'){
+          const hdSrc= e.target.dataset.hdSrc;
+          const caption=e.target.dataset.caption;
+          const hdImageContainer=document.createElement('div');
+          hdImageContainer.id ='hd-image-container';
+          hdImageContainer.style.display ='flex';
+
+          const hdImage = document.createElement('img');
+          hdImage.src = hdSrc;
+          hdimagecontainer.appendChild(captionElement);
+          document.body.appendchild(hdImageContainer);
+          hdImage.src = hdSrc;
+          hdImageContainer.add
+     
